@@ -1,3 +1,23 @@
+# React Flickr Gallery
+To run this project, foolow next steps
+## Request flickr api key
+Get your api key [here](https://www.flickr.com/services/apps/create/noncommercial/?)
+##SetUp your config file
+go to the React-gallery/src create config.js that looks like this:
+```
+const api = {
+	key: "YOUR API",
+};
+export default api;
+```
+## Start Project
+```
+cd React-gallery
+npm start
+```
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
