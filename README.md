@@ -2,7 +2,7 @@
 To run this project, foolow next steps
 ## Request flickr api key
 Get your api key [here](https://www.flickr.com/services/apps/create/noncommercial/?)
-##SetUp your config file
+## SetUp your config file
 go to the React-gallery/src create config.js that looks like this:
 ```
 const api = {
