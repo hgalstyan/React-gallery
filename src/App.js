@@ -7,7 +7,7 @@ import Home from "./Components/Home";
 import Navigation from './Components/Navigation';
 import ImageWrapper from './Components/ImageWrapper';
 import PathNotFound from './Components/PathNotFound';
-
+import SearchRequest from './Components/SearchRequest';
 
 class App extends React.Component {
 
@@ -25,6 +25,7 @@ constructor(props) {
           <Navigation />
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/search' component={SearchRequest}/>
             <Route path='/search/:query' component={ImageWrapper} />
             <Route path='*' component={PathNotFound} />
           </Switch>

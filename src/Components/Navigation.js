@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink, Route} from "react-router-dom";
 
 import SearchForm from "./SearchForm";
 
@@ -16,7 +16,7 @@ export default class Navigation extends Component {
 	render(){
 		return(
 			<div className="main-nav">
-				<SearchForm onSubmit={this.navigate}/>
+				<Route path="/search" render={ () => <SearchForm onSubmit={this.navigate}/>}/>
 		        <ul>
 		          <li><NavLink to='/search/batman'>Batman</NavLink></li>
 		          <li><NavLink to='/search/cars'>Cars</NavLink></li>
