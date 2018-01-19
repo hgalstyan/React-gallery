@@ -26,7 +26,10 @@ constructor(props) {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/search' component={SearchRequest}/>
-            <Route path='/search/:query' component={ImageWrapper} />
+            <Route path='/search/:query' render={(props)=> <ImageWrapper  search={props.match.params.query}/>} />
+            <Route exact path='/batman' render={()=><ImageWrapper search="batman"/>} />
+            <Route exact path='/cars' render={()=><ImageWrapper search="cars"/>} />
+            <Route exact path='/gadgets' render={()=><ImageWrapper search="gadgets"/>} />
             <Route path='*' component={PathNotFound} />
           </Switch>
         </div>

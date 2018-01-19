@@ -18,9 +18,9 @@ export default class Navigation extends Component {
 			<div className="main-nav">
 				<Route path="/search" render={ () => <SearchForm onSubmit={this.navigate}/>}/>
 		        <ul>
-		          <li><NavLink to='/search/batman'>Batman</NavLink></li>
-		          <li><NavLink to='/search/cars'>Cars</NavLink></li>
-		          <li><NavLink to='/search/gadgets'>Gadgets</NavLink></li>
+		          <li><NavLink to='/batman'>Batman</NavLink></li>
+		          <li><NavLink to='/cars'>Cars</NavLink></li>
+		          <li><NavLink to='/gadgets'>Gadgets</NavLink></li>
 		        </ul>
 	        </div>
 	    );
