@@ -2,11 +2,11 @@ import React from 'react';
 
 import performSearch from "../request";
 import NotFound from './NotFound';
-import Image from './Image';
+import GalleryItem from './Gallery-item';
 
 
 //Class for all rendered images
-class ImageWrapper extends React.Component {
+class Gallery extends React.Component {
 
   constructor() {
     super();
@@ -73,7 +73,7 @@ class ImageWrapper extends React.Component {
               ? <ul>{
                 img.map((photo) => {
                   return (
-                    <Image src={photo.url_m} key={photo.id} />
+                    <GalleryItem src={photo.url_m} key={photo.id} />
                   );
                 })
                 }
@@ -89,4 +89,4 @@ class ImageWrapper extends React.Component {
 }
 
 
-export default ImageWrapper;
+export default Gallery;

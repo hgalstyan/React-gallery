@@ -4,12 +4,16 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 
 import Home from "./Components/Home";
-import Navigation from './Components/Navigation';
-import ImageWrapper from './Components/ImageWrapper';
+import Header from './Components/Header';
+import Gallery from './Components/Gallery';
 import PathNotFound from './Components/PathNotFound';
-import SearchRequest from './Components/SearchRequest';
 
 class App extends React.Component {
+
+navigate = (query) => {
+    window.location.assign(`/search/${query}`);
+}
+
 
 constructor(props) {
     super(props);
@@ -22,14 +26,13 @@ constructor(props) {
     return (
       <BrowserRouter>
         <div className='App'>
-          <Navigation />
+          <Header onSubmit={this.navigate}/>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/search' component={SearchRequest}/>
-            <Route path='/search/:query' render={(props)=> <ImageWrapper  search={props.match.params.query}/>} />
-            <Route exact path='/batman' render={()=><ImageWrapper search="batman"/>} />
-            <Route exact path='/cars' render={()=><ImageWrapper search="cars"/>} />
-            <Route exact path='/gadgets' render={()=><ImageWrapper search="gadgets"/>} />
+            <Route path='/search/:query' render={(props)=> <Gallery  search={props.match.params.query}/>} />
+            <Route exact path='/batman' render={()=><Gallery search="batman"/>} />
+            <Route exact path='/cars' render={()=><Gallery search="cars"/>} />
+            <Route exact path='/gadgets' render={()=><Gallery search="gadgets"/>} />
             <Route path='*' component={PathNotFound} />
           </Switch>
         </div>

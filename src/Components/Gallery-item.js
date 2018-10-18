@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Image = (props) => {
+const GalleryItem = (props) => {
 
   return (  
     <li>
@@ -12,4 +12,4 @@ const Image = (props) => {
     
 
 
-export default Image;
+export default GalleryItem;
